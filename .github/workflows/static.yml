@@ -36,9 +36,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Compile Streaming Client
-        run: tsc --build js/streaming-client/tsconfig.json
+        run: tsc --build --force js/streaming-client/tsconfig.json
       - name: Compile TypeScript
-        run: tsc --build tsconfig.json
+        run: tsc --build --force tsconfig.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
